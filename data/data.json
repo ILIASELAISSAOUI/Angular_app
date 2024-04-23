@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "nom": "telephone",
+      "marque": "samsung",
+      "modele": "2018",
+      "prix": "5000",
+      "disponible": true,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nom": "pc",
+      "marque": "asus",
+      "modele": "2016",
+      "prix": "4300",
+      "disponible": false
+    },
+    {
+      "nom": "pc",
+      "marque": "Hp",
+      "modele": "2017",
+      "prix": "4000",
+      "disponible": true,
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "nom": "telephone",
+      "marque": "oppo",
+      "modele": "2023",
+      "prix": "3100",
+      "disponible": false
+    },
+    {
+      "id": "5",
+      "nom": "tablette",
+      "marque": "samsung",
+      "modele": "2019",
+      "prix": "1700",
+      "disponible": true
+    },
+    {
+      "id": "6",
+      "nom": "tablette",
+      "marque": "apple",
+      "modele": "2020",
+      "prix": "2700",
+      "disponible": true
+    },
+    {
+      "id": "7",
+      "name": "pc",
+      "marque": "asus",
+      "modele": "2012",
+      "prix": "2200",
+      "disponible": true
+    }
+  ]
+}

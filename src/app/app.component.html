@@ -1,0 +1,17 @@
+<nav class="p-4">
+  <ul class="nav nav-pills p-2">
+    <li class="nav-item" *ngFor="let button of buttons">
+      <button
+        [ngClass]="currentButton==button? 'btn btn-info m-1':'btn btn-outline-info m-1'"
+        [routerLink]="button.route">
+        {{ button.name }}
+        <i class="{{button.icon}} text-success"></i>
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet>
+
+</router-outlet>
+
