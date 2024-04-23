@@ -1,0 +1,49 @@
+<div class="card p-4">
+  <app-dashboard></app-dashboard>
+  <div class="card-header p-3">
+      <div class="row">
+        <div class=" col-3">
+          <input type="text" [(ngModel)]="appState.productState.motCle"  (ngModelChange)="onChange()" placeholder="Search" class=" form-control rounded">
+        </div>
+      </div>
+  </div>
+  <div class="card-body">
+    <table class="table p-1">
+      <thead>
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">marque</th>
+        <th scope="col">modele</th>
+        <th scope="col">prix</th>
+        <th scope="col">disponible</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let produit of appState.productState.products">
+        <td>{{produit.nom }}</td>
+        <td>{{produit.marque}}</td>
+        <td>{{produit.modele}}</td>
+        <td>{{produit.prix}}</td>
+        <td>
+          <button (click)="handleCheckButton(produit)" class="btn btn-outline-success">
+            <i [ngClass]="produit.disponible==true?'bi bi-check':'bi bi-circle'"></i>
+          </button>
+        </td>
+        <td>
+          <button (click)="handleDeleteProduct(produit)" class="btn btn-outline-danger">
+            <i class="bi bi-trash"></i>
+          </button>
+          <button (click)="handleUpdate(produit)" class="btn btn-outline-success m-1">
+            <i class="bi bi-pencil"></i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <ul class="nav nav-pills">
+      <li *ngFor="let cPage of [].constructor(appState.productState.totalPages);let i=index">
+          <button [ngClass]="appState.productState.page==(i+1)?'btn btn-info m-1':'btn btn-outline-info m-1'"  (click)="handleCurrentPage(i+1)">{{i+1}}</button>
+      </li>
+    </ul>
+  </div>
+</div>

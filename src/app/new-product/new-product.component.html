@@ -1,0 +1,32 @@
+<div class="p-3">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group card p-4">
+        <form [formGroup]="productFrm" (ngSubmit)="saveProduct()" *ngIf="productFrm">
+            <div class="form-group mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" formControlName="nom" id="name" placeholder="Name">
+            </div>
+          <div class="form-group mb-3">
+            <label for="marque" class="form-label">Marque</label>
+            <input type="text" class="form-control" formControlName="marque" id="marque" placeholder="marque">
+          </div>
+          <div class="form-group mb-3">
+            <label for="modele" class="form-label">Modele</label>
+            <input type="text" class="form-control" formControlName="modele" id="modele" placeholder="modele">
+          </div>
+          <div class="form-group mb-3">
+            <label for="prix" class="form-label">Prix</label>
+            <input type="text" class="form-control" formControlName="prix" id="prix" placeholder="prix">
+          </div>
+          <div class="form-group mb-3">
+            <label for="disponible" class="form-label">Disponible</label>
+            <input type="checkbox" class="form-check" formControlName="disponible" id="disponible" placeholder="disponible">
+          </div>
+          <button [disabled]="productFrm.invalid" type="submit" class="btn btn-primary">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
